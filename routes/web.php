@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,16 @@ Route::get('/salas', 'RoomsController@index')->name('rooms');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::post('/rooms/register', function(Request $request) {
+	try {
+		dd($request->all());
+
+		$room = \App\Room::find($request->id);
+
+		
+	} catch (Exception $e) {
+		return json_ecode('erro' => $e->code);
+	}
+})->name('room_register');

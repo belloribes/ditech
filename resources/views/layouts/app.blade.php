@@ -79,7 +79,7 @@
             </div>
         </li>
         <li class="active"><a href="{{ route('home') }}" class="blue-grey-text text-lighten-4"><i class="material-icons blue-grey-text text-lighten-4">home</i> Home</a></li>
-        <li><a href="#!" class="blue-grey-text text-lighten-4"><i class="material-icons blue-grey-text text-lighten-4">person_pin_circle</i> Reservas</a></li>
+        <li><a href="#!" class="blue-grey-text text-lighten-4"><i class="material-icons blue-grey-text text-lighten-4">date_range</i> Reservas</a></li>
         <li><a href="{{ route('rooms') }}" class="blue-grey-text text-lighten-4"><i class="material-icons blue-grey-text text-lighten-4">place</i> Salas</a></li>
         <li><a href="#!" class="blue-grey-text text-lighten-4"><i class="material-icons blue-grey-text text-lighten-4">apps</i> Locais</a></li>
         <li><a href="#!" class="blue-grey-text text-lighten-4"><i class="material-icons blue-grey-text text-lighten-4">perm_identity</i> Usuários</a></li>
@@ -119,7 +119,8 @@
             $('.modal').modal();
             $('select').material_select();
         });
-
     </script>
+
+    @stack('scripts')
 </body>
 </html>
